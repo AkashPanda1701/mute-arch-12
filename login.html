@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      img {
+        margin: 50px;
+        width: 120px;
+      }
+
+      body {
+        display: flex;
+        font-family: Roboto;
+      }
+
+      #container {
+        height: 100vh;
+        width: 32%;
+      }
+
+      #rightSection {
+        height: 100vh;
+        width: 68%;
+        background-color: #fade2a;
+        background-size: cover;
+      }
+
+      #rightSection > div:nth-child(1) {
+        width: 44%;
+        height: 35.5vh;
+        position: relative;
+        top: 80px;
+        left: 100px;
+      }
+      button {
+        padding: 5px 10px;
+        border-radius: 15px;
+        border: none;
+
+        font-size: 16px;
+        color: rgb(45, 44, 44);
+        margin-bottom: 40px;
+      }
+      #rightSection > div > h2 {
+        width: 100%;
+        font-size: 40px;
+        margin-bottom: 20px;
+        font-weight: 750;
+        line-height: 46px;
+        color: #232323;
+      }
+
+      #rightSection > div > p {
+        color: #3d3d3d;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 23px;
+      }
+
+      #rightSection > div:nth-child(2) {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 64.5vh;
+      }
+      #rightSection > div > img {
+        width: 80%;
+        height: 100%;
+        margin: 0;
+      }
+
+      h2 {
+        width: 320px;
+        line-height: 32px;
+      }
+
+      p {
+        margin: 5px;
+      }
+
+      form {
+        width: 80%;
+        font-weight: 500;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        height: 50px;
+        margin: 5px auto 15px;
+        border-radius: 5px;
+        border: 0.5px solid rgb(184, 182, 182);
+        font-size: 25px;
+        padding-left: 10px;
+      }
+      h1 {
+        margin-bottom: 40px;
+        color: rgb(63, 62, 62);
+      }
+      input:nth-child(6) {
+        width: 100%;
+        height: 55px;
+        font-weight: bold;
+        font-size: 18px;
+        background-color: blue;
+        border: none;
+        margin-top: 30px;
+        color: white;
+      }
+      input:nth-child(6):hover {
+        background-color: rgb(25, 25, 141);
+        color: white;
+        cursor: pointer;
+      }
+      form > div {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 14px;
+        color: rgb(113, 113, 113);
+        margin-top: -15px;
+      }
+      form + p {
+        color: gray;
+        margin: -5% 15%;
+        font-weight: 500;
+      }
+      #forgot:hover,
+      #sign:hover {
+        cursor: pointer;
+        color: rgb(104, 56, 237);
+      }
+      @media only screen and (max-width: 1400px) {
+        #rightSection {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+        }
+
+        #container {
+          height: 100vh;
+          width: 100%;
+          margin: auto;
+        }
+        #container > div {
+          height: 100vh;
+          width: 45%;
+          margin: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <img
+        src="https://static.buffer.com/login/public/img/buffer-logo.svg"
+        alt=""
+      />
+      <div>
+        <form>
+          <h1>Log in</h1>
+
+          <label for="">Email Address</label>
+          <input type="email" id="email" />
+
+          <label for="">Password</label>
+          <input type="password" id="password" />
+
+          <input type="submit" value="Log In" />
+          <div>
+            <p id="sign">Create an account</p>
+            <p id="forgot">Forgot your password?</p>
+          </div>
+        </form>
+        <p>Terms of Service • Privacy Policy • Security</p>
+      </div>
+    </div>
+
+    <div id="rightSection">
+      <div>
+        <button>New from Buffer</button>
+        <h2>Introducing: A free micro-site by Buffer</h2>
+        <p>
+          A Start Page is a beautiful, flexible, mobile-friendly landing page
+          that you can build in minutes and update in seconds
+        </p>
+      </div>
+      <div>
+        <img src="https://login.buffer.com/img/sp-login-image.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  document.querySelector("form").addEventListener("submit", loginData);
+
+  let SignupData = JSON.parse(localStorage.getItem("SignupData")) || [];
+
+  function loginData() {
+    event.preventDefault();
+
+    let obj = {
+      email: document.querySelector("#email").value,
+      password: document.querySelector("#password").value,
+    };
+
+    for (let key in obj) {
+      if (obj[key] == "") {
+        alert("Please Fill All The Details");
+        return;
+      }
+    }
+    let flag = 0;
+
+    SignupData.forEach(function (ele) {
+      if (ele.email == obj.email && ele.password == obj.password) {
+        flag = 1;
+      } else if (ele.email == obj.email || ele.password == obj.password) {
+        flag = 2;
+      }
+    });
+
+    if (flag == 0) {
+      alert("Details Not Found! Please SignUp first");
+      window.location.href = "signup.html";
+      return;
+    }
+    if (flag == 1) {
+      localStorage.setItem("LoginData", JSON.stringify(obj));
+      alert("Login Successfull !");
+      window.location.href = "main.html";
+      return;
+    }
+    if (flag == 2) {
+      alert("Please Check Your Credentials ! OR click on Forgot Password");
+      return;
+    }
+  }
+
+  document.querySelector("#sign").addEventListener("click", function () {
+    window.location.href = "signup.html";
+  });
+
+  document.querySelector("#forgot").addEventListener("click", function () {
+    let email = document.querySelector("#email").value;
+
+    if (email == "") {
+      alert("Please Fill your Email Address");
+      return;
+    }
+
+    let flag=false;
+
+    SignupData.forEach(function (ele) {
+      if (ele.email == email) {
+        flag=true;
+        alert("Your Password - "+ ele.password);
+      }
+    });
+
+    if(flag==false){
+        alert("Details Not Found! Please Check your Email");
+ 
+      return;
+    }
+  });
+</script>

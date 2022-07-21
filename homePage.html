@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,700&family=Roboto:ital,wght@0,100;0,400;0,700;1,700&display=swap"
       rel="stylesheet"
     />
 
@@ -19,14 +19,34 @@
         padding: 0;
         font-family: Roboto, sans-serif;
       }
+      body{
+        overflow-x: hidden;
+      }
+
+      h2 {
+        font-size: 35px;
+        line-height: 50px;
+        font-family: "Poppins", sans-serif;
+      }
+      p {
+        font-size: 22.5px;
+        font-family: Roboto, sans-serif;
+        line-height: 35px;
+      }
+      h3 {
+        line-height: 60px;
+        color: blue;
+      }
+
+      /* Navbar */
       #navbar {
-        width: 80%;
+        width: 85%;
         margin: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
         font-size: 20px;
-        padding:40px 30px;
+        padding: 40px 30px;
       }
 
       .stickyNav {
@@ -38,17 +58,17 @@
       }
 
       #navbar > div:nth-child(1) {
-        width: 16%;
+        /* width: 16%; */
         padding: 5px;
         display: flex;
       }
 
       #navbar > div > img {
-        width: 50%;
+        width: 110px;
       }
       #navbar > div > img + img {
-        width: 12%;
-        margin: 10px;
+        width: 25px;
+        margin: 10px 0 10px 10px;
       }
 
       #navbar > div:nth-child(2) {
@@ -57,7 +77,7 @@
         justify-content: space-around;
       }
       #navbar > div:nth-child(3) {
-        width: 25%;
+        /* width: 25%; */
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -71,19 +91,280 @@
 
       button {
         font-size: 18px;
-        line-height: 2.6;
+        width: 200px;
         font-weight: 400;
         border-radius: 5px;
-        font-family: Roboto, sans-serif;
         background-color: rgb(44, 75, 255);
         color: rgb(255, 255, 255);
-        padding: 0px 24px;
+        padding: 17px;
         border: 0px;
+        margin: 10px;
       }
       button:hover {
         cursor: pointer;
         background-color: rgb(41, 58, 154);
       }
+
+      /* top section */
+
+      #top {
+        width: 85%;
+        margin: 60px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 100px;
+      }
+
+      #top > div > img {
+        width: 100%;
+      }
+      #top h1 {
+        width: 91%;
+        line-height: 60px;
+        font-size: 46px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        margin: 100px 0 40px;
+      }
+
+      #top p {
+        width: 88%;
+        font-size: 22px;
+        line-height: 35px;
+        margin-bottom: 50px;
+      }
+      .signup + button {
+        border: 1px solid blue;
+        background-color: white;
+        color: blue;
+      }
+
+      button > img {
+        width: 15px;
+      }
+
+      #top + div {
+        width: 85%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      #top + div > div > img {
+        width: 90%;
+      }
+
+      /* below top1 */
+
+      #belowTop1 {
+        width: 40%;
+        margin: 100px auto 40px;
+        text-align: center;
+      }
+
+      #belowTop1 > h2 {
+        margin: 40px auto;
+      }
+
+      /* belowTop2 */
+
+      .belowTop2 {
+        width: 65%;
+        margin: 140px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+      }
+      .belowTop2 img {
+        width: 100%;
+        height: 90%;
+      }
+      .belowTop2 p {
+        margin: 40px 0;
+      }
+
+      #aboveMiddle {
+        width: 45%;
+        margin: auto;
+        text-align: center;
+      }
+
+      /* Middle section */
+
+      @keyframes animate {
+        from {
+          -webkit-transform: translate3d(20%, 0, 0);
+          -ms-transform: translate3d(20%, 0, 0);
+          transform: translate3d(20%, 0, 0);
+        }
+        to {
+          -webkit-transform: translate3d(-20%, 0, 0);
+          -ms-transform: translate3d(-20%, 0, 0);
+          transform: translate3d(-20%, 0, 0);
+        }
+      }
+      #middle {
+        display: grid;
+        grid-template-columns: repeat(5, 25%);
+        grid-template-rows: 450px;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 30px;
+        margin: 30px auto;
+        animation: 15s linear 0s infinite normal none running animate;
+        flex-wrap:nowrap;
+        box-sizing: border-box;
+        
+        
+      }
+      #middle > div {
+        text-align: center;
+        padding-bottom: 80px;
+        box-shadow: rgb(0 0 0 / 20%) 0px 0px 30px -1px;
+        border-radius: 10px;
+      }
+      #middle > div > img:first-child {
+        border-radius: 50%;
+        margin-top: -70px;
+      }
+      #middle > div > p {
+        width: 75%;
+        font-size: 16px;
+        margin: 25px auto 20px;
+        line-height: 20px;
+      }
+
+      #middle + div {
+        width: 85%;
+        margin: auto;
+        height: 150px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      #middle + div > div {
+        display: grid;
+        align-items: center;
+        text-align: center;
+      }
+      #middle + div > div > h1 {
+        font-size: 45px;
+        font-family: "Poppins", sans-serif;
+        color: #2c4bff;
+        margin-bottom: -58px;
+      }
+
+      #belowMiddle {
+        width: 85%;
+      }
+      #belowMiddle button {
+        border: 1px solid blue;
+        background-color: white;
+        color: blue;
+      }
+
+      #aboveBottom1 {
+        text-align: center;
+        margin-bottom: 100px;
+      }
+      #aboveBottom1 > h4 {
+        font-size: 18px;
+      }
+      #aboveBottom1 > img {
+        width: 35%;
+      }
+      #aboveBottom2 {
+        height: 575px;
+        background-image: url("https://i.ibb.co/7SdfTzT/image.png");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #aboveBottom2>div{
+        width: 40%;
+        text-align: center;
+      }
+
+      
+      #aboveBottom2 >div> h2 {
+        color: white;
+        margin-bottom: 20px;
+      }
+      #aboveBottom2 >div> button {
+        text-align: center;
+        color: white;
+        background-color: #e97284;
+        padding: 25px 30px;
+      }
+      #aboveBottom2 >div> button:hover {
+        background-color: #e7213e;
+      }
+
+      /* footer */
+
+      #bottom {
+        width: 80%;
+        height: 400px;
+        margin: 200px auto 0;
+        display: grid;
+        grid-template-columns: 25% 70%;
+        gap: 5%;
+      }
+      #bottom > div:last-child {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      #bottom > div > img {
+        width: 100%;
+      }
+      #bottom h3 {
+        color: black;
+        font-size: 20px;
+      }
+      #bottom p {
+        font-size: 18px;
+      }
+      #bottom p:hover {
+        cursor: pointer;
+        color: #2c4bff;
+      }
+
+      @media all and (min-width: 360px) and (max-width: 980px) {
+        
+        #navbar > div:nth-child(2) {
+          position: absolute;
+          visibility: hidden;
+        }
+
+        #top {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      #top + div {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .belowTop2 {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .belowTop2>div>button{
+        margin: 10px;
+      }
+     
+      #reverse>div:nth-child(1){
+        order: 1;
+      }
+      #reverse>div:nth-child(2){
+        
+        order: 0;
+      }
+
+      #middle + div {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      #middle + div > div > h1 {
+        margin-bottom: 0;
+      }
+    }
     </style>
   </head>
   <body>
@@ -109,11 +390,261 @@
 
       <div>
         <span id="login">LogIn</span>
-        <button id="signup">Get Started Now</button>
+        <button class="signup">Get Started Now</button>
       </div>
     </div>
 
-    
+    <div id="top">
+      <div>
+        <h1>Grow your audience on social and beyond</h1>
+        <p>
+          Buffer helps you build an audience organically. We’re a values-driven
+          company that provides affordable, intuitive, marketing tools for
+          ambitious people and teams.
+        </p>
+        <button class="signup">Get Started Now</button>
+        <button>
+          <img
+            src="https://spng.pinpng.com/pngs/s/187-1879059_total-video-player-total-video-player-icon-hd.png"
+            alt=""
+          />
+          Watch Video
+        </button>
+      </div>
+      <div>
+        <img
+          src="https://buffer.com/static/illustrations/social-icons-hero.webp"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <img src="https://i.ibb.co/fC5xDj8/image.png" alt="" />
+      </div>
+      <div>
+        <img src="https://i.ibb.co/vmdnBjd/image.png" alt="" />
+      </div>
+    </div>
+
+    <div id="belowTop1">
+      <h2>Be where your customers are</h2>
+      <p>
+        People spend, on average, almost 2.5 hours on social media every day.
+        ​​Let them find your brand more easily through these four simple steps:
+      </p>
+    </div>
+
+    <img src="https://buffer.com/static/misc/buffer-loop-v2.svg" alt="" />
+
+    <div class="belowTop2">
+      <div>
+        <h3>1. ANALYZE</h3>
+        <h2>Measure your social media performance in a few clicks</h2>
+        <p>See what’s working and deliver high engagement content.</p>
+        <button class="signup">Get Started Now</button>
+        <button>Learn more</button>
+      </div>
+      <div>
+        <img
+          src="https://buffer.com/static/illustrations/thumb-stop-content-2.webp"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="belowTop2"  id="reverse">
+      <div>
+        <img
+          src="https://buffer.com/static/illustrations/collaborate-more-efficiently@2x.webp"
+          alt=""
+        />
+      </div>
+      <div>
+        <h3>2. PLAN AND PUBLISH YOUR CONTENT</h3>
+        <h2>Collaborate and plan your campaigns</h2>
+        <p>Schedule your posts in advance so you can focus on other things.</p>
+        <button class="signup">Get Started Now</button>
+        <button>Learn more</button>
+      </div>
+    </div>
+
+    <div class="belowTop2">
+      <div>
+        <h3>3. ENGAGE</h3>
+        <h2>Respond to comments twice as fast</h2>
+        <p>Skip to important comments with the help of labels and hotkeys.</p>
+        <button class="signup">Get Started Now</button>
+        <button>Learn more</button>
+      </div>
+      <div>
+        <img
+          src="https://buffer.com/static/illustrations/hero-reply@2x-2.webp"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div id="aboveMiddle">
+      <h3>4. CELEBRATE</h3>
+      <h2>Businesses all over the world trust Buffer to build their brand</h2>
+    </div>
+
+    <div id="middle">
+      <div>
+        <img
+          src="https://static.buffer.com/cdn-cgi/image/w=128,quality=90,format=auto/marketing/static/testimonials/liz-gillis-dress-up@2x-mobile.jpg"
+          alt=""
+        />
+        <p>
+          On social, we need to be fast, efficient, and intentional. Buffer
+          allows us to be exactly that.
+        </p>
+        <img src="https://i.ibb.co/b25hqYj/image.png" alt="" />
+        <h4>Liz Gillis, Digital Marketer</h4>
+      </div>
+      <div>
+        <img
+          src="https://static.buffer.com/cdn-cgi/image/w=128,quality=90,format=auto/marketing/static/testimonials/troy-petrunoff@mobile.jpg"
+          alt=""
+        />
+        <p>
+          For a marketing team with a lot on our plates, Buffer is a crucial
+          tool in our brand-building efforts.
+        </p>
+        <img src="https://i.ibb.co/xJZ1wyq/image.png" alt="" />
+        <h4>Troy Petrunoff, Marketing Manager</h4>
+      </div>
+      <div>
+        <img
+          src="https://static.buffer.com/cdn-cgi/image/w=128,quality=90,format=auto/marketing/static/testimonials/rodrigo-hyago-happysocks@mobile.jpg"
+          alt=""
+        />
+        <p>
+          Buffer makes it easy for us to monitor all of our engagement and
+          strengthen the connection.
+        </p>
+        <img src="https://i.ibb.co/RpRKkXT/image.png" alt="" />
+        <h4>Rodrigo Hyago, Social Media Content Manager</h4>
+      </div>
+      <div>
+        <img
+          src="https://static.buffer.com/cdn-cgi/image/w=128,quality=90,format=auto/marketing/static/testimonials/joe-mercy-for-animals@mobile.jpg"
+          alt=""
+        />
+        <p>
+          Buffer saves us, literally, hours and in turn helps us spread our
+          message even further.
+        </p>
+        <img src="https://i.ibb.co/SrTw0Fk/image.png" alt="" />
+        <h4>Joe Loria, Content Manager</h4>
+      </div>
+      <div>
+        <img
+          src="https://static.buffer.com/cdn-cgi/image/w=128,quality=90,format=auto/marketing/static/testimonials/luis-cancel-huckberry-mobile.jpg"
+          alt=""
+        />
+        <p>
+          Buffer has made sharing our story and building our brand on social
+          media so much easier.
+        </p>
+        <img src="https://i.ibb.co/7CxXvDH/image.png" alt="" />
+        <h4>Luis Cancel, Managing Editor</h4>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <h1>10 years</h1>
+        <p>in business</p>
+      </div>
+      <div>
+        <h1>140,000</h1>
+        <p>users</p>
+      </div>
+      <div>
+        <h1>100k+</h1>
+        <p>monthly blog readers</p>
+      </div>
+      <div>
+        <h1>1.2m+</h1>
+        <p>social followers</p>
+      </div>
+    </div>
+
+    <div class="belowTop2" id="belowMiddle">
+      <div>
+        <img
+          src="https://static.buffer.com/cdn-cgi/image/w=640,quality=90,format=auto/marketing/static/team/buffer-team-map-2022@2x.jpg"
+          alt=""
+        />
+      </div>
+      <div>
+        <h2>And we are here to help</h2>
+        <p>
+          Our customer advocates are standing by 24/7 to support you via email
+          and social media. We also have a comprehensive, regularly updated help
+          center for those who prefer to find help themselves.
+        </p>
+        <button>Visit our help center</button>
+      </div>
+    </div>
+
+    <div id="aboveBottom1">
+      <h4>An official marketing partner of the industry leaders</h4>
+      <img src="https://i.ibb.co/h1HY8tj/image.png" alt="" />
+    </div>
+
+    <div id="aboveBottom2">
+      <div>
+        <h2>
+          140,000+ people like you use Buffer to build their brand on social media
+          every month
+        </h2>
+        <button class="signup">Get Started Now</button>
+
+      </div>
+    </div>
+
+    <div id="bottom">
+      <div>
+        <img src="https://i.ibb.co/rMB0YpJ/image.png" alt="" />
+      </div>
+      <div>
+        <div>
+          <h3>Tools</h3>
+          <p>Publishing</p>
+          <p>Analytics</p>
+          <p>Engagement</p>
+          <p>Start Page</p>
+          <p>Extra</p>
+        </div>
+        <div>
+          <h3>Resources</h3>
+          <p>Blog</p>
+          <p>Content Library</p>
+          <p>Browser Extension</p>
+          <p>Free Image Editor</p>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <p>Help Center</p>
+          <p>Status</p>
+          <p>Changelog</p>
+          <p>Product Roadmap</p>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <p>About</p>
+          <p>Transparency</p>
+          <p>Careers</p>
+          <p>Accessibility</p>
+          <p>Press</p>
+          <p>Sitemap</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 
@@ -150,10 +681,14 @@
 </script>
 
 <script>
-  document.querySelector("#login").addEventListener("click",()=>{
-    window.location.href="login.html";
+  document.querySelector("#login").addEventListener("click", () => {
+    window.location.href = "login.html";
   });
-  document.querySelector("#signup").addEventListener("click",()=>{
-    window.location.href="signup.html";
+  let buttons = document.querySelectorAll(".signup");
+
+  buttons.forEach(function (ele) {
+    ele.addEventListener("click", () => {
+      window.location.href = "signup.html";
+    });
   });
 </script>

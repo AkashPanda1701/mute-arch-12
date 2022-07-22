@@ -1,85 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+p {
+  font-size: 22.5px;
+  font-family: Roboto, sans-serif;
+  line-height: 35px;
+}
+/* Navbar */
+#navbar {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 40px 30px;
+}
 
-         * {
-        margin: 0;
-        padding: 0;
-        font-family: Roboto, sans-serif;
-      }
-      p {
-        font-size: 22.5px;
-        font-family: Roboto, sans-serif;
-        line-height: 35px;
-      }
-         /* Navbar */
-      #navbar {
-        width: 85%;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 20px;
-        padding: 26px 30px;
-      }
+.stickyNav {
+  position: sticky;
+  top: 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+}
+#navbar p:hover {
+  border-bottom: 3px solid #2c4bff;
+  cursor: pointer;
+  border-radius: 2px;
+  color: #2c4bff;
+}
 
-      .stickyNav {
-        position: sticky;
-        top: 0px;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        background-color: white;
-        border-radius: 0 0 15px 15px;
-      }
-      #navbar p:hover{
-        border-bottom:3px solid #2c4bff;
-        cursor: pointer;
-        border-radius: 2px;
-        color: #2c4bff;
-      }
+#navbar > div:nth-child(1) {
+  /* width: 16%; */
+  padding: 5px;
+  display: flex;
+}
 
-      #navbar > div:nth-child(1) {
-        /* width: 16%; */
-        padding: 5px;
-        display: flex;
-      }
+#navbar > div > img {
+  width: 110px;
+}
+#navbar > div > img + img {
+  width: 25px;
+  margin: 10px 0 10px 10px;
+}
 
-      #navbar > div > img {
-        width: 110px;
-      }
-      #navbar > div > img + img {
-        width: 25px;
-        margin: 10px 0 10px 10px;
-      }
+#navbar > div:nth-child(2) {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+#navbar > div:nth-child(3) {
+  /* width: 25%; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
-      #navbar > div:nth-child(2) {
-        width: 40%;
-        display: flex;
-        justify-content: space-around;
-      }
-      #navbar > div:nth-child(3) {
-        /* width: 25%; */
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-      }
+span {
+  color: blue;
+  margin-right: 12px;
+  cursor: pointer;
+}
 
-      span {
-        color: blue;
-        margin-right: 12px;
-        cursor: pointer;
-      }
+button {
+  font-size: 18px;
+  width: 200px;
+  font-weight: 400;
+  border-radius: 5px;
+  background-color: rgb(44, 75, 255);
+  color: rgb(255, 255, 255);
+  padding: 17px;
+  border: 0px;
+  margin: 10px;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(41, 58, 154);
+}
 
-      button {
-        font-size: 18px;
-        width: 200px;
-        font-weight: 400;
-        border-radius: 5px;
-        background-color: rgb(44, 75, 255);
-        color: rgb(255, 255, 255);
-        padding: 17px;
-        border: 0px;
-        margin: 10px;
-      }
-      button:hover {
-        cursor: pointer;
-        background-color: rgb(41, 58, 154);
-      }
-    
+/* footer */
+#aboveBottom2 {
+  height: 575px;
+  background-image: url("https://i.ibb.co/7SdfTzT/image.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#aboveBottom2 > div {
+  width: 40%;
+  text-align: center;
+}
 
+#aboveBottom2 > div > h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+#aboveBottom2 > div > button {
+  text-align: center;
+  color: white;
+  background-color: #e97284;
+  padding: 25px 30px;
+}
+#aboveBottom2 > div > button:hover {
+  background-color: #e7213e;
+}
+
+/* footer */
+
+#bottom {
+  width: 80%;
+  height: 400px;
+  margin: 200px auto 0;
+  display: grid;
+  grid-template-columns: 25% 70%;
+  gap: 5%;
+}
+#bottom > div:last-child {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+#bottom > div > img {
+  width: 100%;
+}
+#bottom h3 {
+  color: black;
+  font-size: 20px;
+}
+#bottom p {
+  font-size: 18px;
+}
+#bottom p:hover {
+  cursor: pointer;
+  color: #2c4bff;
+}

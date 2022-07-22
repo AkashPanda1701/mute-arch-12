@@ -12,8 +12,9 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,700&family=Roboto:ital,wght@0,100;0,400;0,700;1,700&display=swap"
       rel="stylesheet"
     />
-
+<link rel="stylesheet" href="navbar.css">
     <style>
+
       * {
         margin: 0;
         padding: 0;
@@ -38,63 +39,6 @@
         color: blue;
       }
 
-      /* Navbar */
-      #navbar {
-        width: 85%;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 20px;
-        padding: 40px 30px;
-      }
-
-      .stickyNav {
-        position: sticky;
-        top: 0px;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        background-color: white;
-        border-radius: 0 0 15px 15px;
-      }
-      #navbar p:hover{
-        border-bottom:3px solid #2c4bff;
-        cursor: pointer;
-        border-radius: 2px;
-        color: #2c4bff;
-      }
-
-      #navbar > div:nth-child(1) {
-        /* width: 16%; */
-        padding: 5px;
-        display: flex;
-      }
-
-      #navbar > div > img {
-        width: 110px;
-      }
-      #navbar > div > img + img {
-        width: 25px;
-        margin: 10px 0 10px 10px;
-      }
-
-      #navbar > div:nth-child(2) {
-        width: 40%;
-        display: flex;
-        justify-content: space-around;
-      }
-      #navbar > div:nth-child(3) {
-        /* width: 25%; */
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-      }
-
-      span {
-        color: blue;
-        margin-right: 12px;
-        cursor: pointer;
-      }
-
       button {
         font-size: 18px;
         width: 200px;
@@ -111,6 +55,7 @@
         background-color: rgb(41, 58, 154);
       }
 
+      
       /* top section */
 
       #top {
@@ -655,38 +600,6 @@
 </html>
 
 <script>
-  var scrollableElement = document; //document.getElementById('scrollableElement');
-
-  scrollableElement.addEventListener("scroll", checkScrollDirection);
-  let scrollValueTop = 1;
-  let scrollValueBottom = 1;
-  let previous = -Infinity;
-  function checkScrollDirection(event) {
-    if (scrollValueTop == 1) {
-      let nav = document.querySelector("#navbar");
-      nav.setAttribute("class", "");
-    }
-    if (window.pageYOffset < 2) {
-      let nav = document.querySelector("#navbar");
-      nav.setAttribute("class", "");
-    }
-
-    scrollValueTop = window.pageYOffset;
-    if (previous < scrollValueTop) {
-      let nav = document.querySelector("#navbar");
-      nav.setAttribute("class", "");
-      previous = scrollValueTop;
-    } else {
-      if (window.pageYOffset > 2) {
-        let nav = document.querySelector("#navbar");
-        nav.setAttribute("class", "stickyNav");
-        previous--;
-      }
-    }
-  }
-</script>
-
-<script>
   document.querySelector("#login").addEventListener("click", () => {
     window.location.href = "login.html";
   });
@@ -698,3 +611,4 @@
     });
   });
 </script>
+<script src="navbar.js"></script>

@@ -28,3 +28,17 @@
         }
       }
     }
+
+
+    // Events
+
+    document.querySelector("#login").addEventListener("click", () => {
+      window.location.href = "login.html";
+    });
+    let buttons = document.querySelectorAll(".signup");
+  
+    buttons.forEach(function (ele) {
+      ele.addEventListener("click", () => {
+        window.location.href = "signup.html";
+      });
+    });

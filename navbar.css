@@ -287,6 +287,8 @@ button > img {
   box-sizing: border-box;
 }
 #middle > div {
+  width:370px !important;
+  height:260px !important;
   text-align: center;
   padding-bottom: 80px;
   box-shadow: rgb(0 0 0 / 20%) 0px 0px 30px -1px;

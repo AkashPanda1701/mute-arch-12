@@ -12,160 +12,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="navbar.css" />
-    <style>
-      h2 {
-        font-size: 35px;
-        line-height: 50px;
-        margin-bottom: 40px;
-        font-family: "Poppins", sans-serif;
-      }
-      #navbar + div {
-        padding-top: 50px;
-        padding-bottom: 80px;
-        background-color: rgb(238, 157, 171);
-        text-align: center;
-      }
-
-      #para {
-        width: 49%;
-        margin: 80px auto;
-      }
-
-      #para > p {
-        margin-bottom: 20px;
-      }
-
-      #para + button {
-        display: block;
-        margin: auto;
-        padding: 15px 21px;
-      }
-      #user {
-        margin: 170px auto;
-        background-image: url("https://i.ibb.co/DR3y6wh/image.png");
-        background-size: contain;
-        display: grid;
-        grid-template-columns: repeat(3, 22%);
-        justify-content: space-around;
-        align-items: center;
-        text-align: center;
-        padding: 61px 100px;
-      }
-      #user > div:nth-child(1) > h2 {
-        font-size: 72px;
-        color: rgb(135, 194, 33);
-        font-family: Poppins, sans-serif;
-        margin-bottom: 10px;
-      }
-      #user > div:nth-child(2) > h2 {
-        font-size: 72px;
-        color: rgb(250, 211, 42);
-        font-family: Poppins, sans-serif;
-        margin-bottom: 10px;
-      }
-      #user > div:nth-child(3) > h2 {
-        font-size: 72px;
-        color: rgb(233, 114, 132);
-        font-family: Poppins, sans-serif;
-        margin-bottom: 10px;
-      }
-      #user p {
-        font-size: 25px;
-      }
-
-      #user + div {
-        width: 55%;
-        margin: auto;
-        text-align: center;
-        margin-bottom: 150px;
-      }
-      #user + div > div {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      #user + div img {
-        width: 100%;
-      }
-
-      #AfterLogo {
-        width: 47%;
-        margin: auto;
-      }
-
-      #group {
-        height: 520px;
-        width: 100%;
-        background-image: url("https://buffer.com/static/team/team-panorama.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        margin-top:120px;
-      }
-      #group+div{
-        padding-top: 200px;
-        margin-bottom: 180px;
-        background-color:whitesmoke;
-      }
-      #group+div>div:nth-child(1){
-        width: 50%;
-        margin: auto;
-        margin-bottom: 60px;
-      }
-      #group+div img{
-        width: 100%;
-      }
-
-      #team{
-        width: 48%;
-        margin:auto;
-      }
-      #team img{
-        margin: 40px auto;
-      }
-      #team+button{
-        margin: 40px auto 180px;
-        text-align: center;
-        display: block;
-        color: blue;
-        background-color: white;
-        border: 1px solid blue;
-        width: 230px;
-      }
-
-      @media all and (min-width: 360px) and (max-width: 980px) {
-        
-        #navbar > div:nth-child(2) {
-          position: absolute;
-          visibility: hidden;
-        }
-        #user {
-        grid-template-columns: repeat(1,1fr);
-        gap:30px;
-      }
-      #user + div > div {
-        grid-template-columns: repeat(1, 1fr);
-      }
-      #team{
-        width: 100%;
-        text-align: center;
-      }
-     p{
-
-         font-size: 16px;
-     }
-      
-      #AfterLogo{
-        text-align: center;
-      }
-     
-    }
-    </style>
   </head>
   <body>
     <div id="navbar">
       <div>
         <img
+          id="logo"
           src="https://static.buffer.com/login/public/img/buffer-logo.svg"
           alt=""
         />
@@ -179,16 +31,34 @@
         <p>Tools</p>
         <p>Pricing</p>
         <p>Blog</p>
-        <p>About</p>
+        <p class="aboutPage">About</p>
         <p>Customers</p>
       </div>
+
       <div>
-        <span id="login">LogIn</span>
+        <span class="login">LogIn</span>
         <button class="signup">Get Started Now</button>
+        <img id="myBtn" src="http://assets.stickpng.com/thumbs/588a6507d06f6719692a2d15.png" alt="" >
+      </div>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div>
+            <img src="https://i.ibb.co/S3NQXC6/image.png" alt="">
+            <h2>Tools</h2>
+            <h2>Pricing</h2>
+            <h2>Blog</h2>
+            <h2 class="aboutPage">About</h2>
+            <h2>Customers</h2>
+            <button class="signup">Get Started Now</button>
+            <h2 class="login">Log in</h2>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div>
+    <div id="abt">
       <h2>About us</h2>
       <img
         src="https://static.buffer.com/cdn-cgi/image/w=750,quality=90,format=auto/marketing/static/team/buffer-group-photo.jpg"
@@ -266,80 +136,87 @@
 
     <div id="group"></div>
 
-
-    
     <div>
-        <div >
-            <h2>Transparency</h2>
-            <p>
-                We try our best to live up to our value of "Default to Transparency." Here's an overview of a few of the things we've made transparent at Buffer.
-            </p>
-        </div>
-        <div>
-            <img src="https://i.ibb.co/z2tNbS9/image.png" alt="">
-        </div>
-        
+      <div>
+        <h2>Transparency</h2>
+        <p>
+          We try our best to live up to our value of "Default to Transparency."
+          Here's an overview of a few of the things we've made transparent at
+          Buffer.
+        </p>
+      </div>
+      <div>
+        <img src="https://i.ibb.co/z2tNbS9/image.png" alt="" />
+      </div>
     </div>
 
     <div id="team">
-        <h2>Team</h2>
-        <p>We’re committed to building a diverse team and a work environment that’s inclusive of people of all backgrounds. Get to know the wonderful team who’s building our product, supporting our customers, and creating educational content.</p>
-        <div>
-            <img src="https://static.buffer.com/cdn-cgi/image/w=640,quality=90,format=auto/marketing/static/team/about-team@2x-v2.jpg" alt="">
-        </div>
+      <h2>Team</h2>
+      <p>
+        We’re committed to building a diverse team and a work environment that’s
+        inclusive of people of all backgrounds. Get to know the wonderful team
+        who’s building our product, supporting our customers, and creating
+        educational content.
+      </p>
+      <div>
+        <img
+          src="https://static.buffer.com/cdn-cgi/image/w=640,quality=90,format=auto/marketing/static/team/about-team@2x-v2.jpg"
+          alt=""
+        />
+      </div>
     </div>
 
     <button>Get to know us better</button>
 
     <div id="aboveBottom2">
+      <div>
+        <h2>
+          140,000+ people like you use Buffer to build their brand on social
+          media every month
+        </h2>
+        <button class="signup">Get Started Now</button>
+      </div>
+    </div>
+
+    <div id="bottom">
+      <div>
+        <img src="https://i.ibb.co/rMB0YpJ/image.png" alt="" />
+      </div>
+      <div>
         <div>
-          <h2>
-            140,000+ people like you use Buffer to build their brand on social media
-            every month
-          </h2>
-          <button class="signup">Get Started Now</button>
-  
+          <h3>Tools</h3>
+          <p>Publishing</p>
+          <p>Analytics</p>
+          <p>Engagement</p>
+          <p>Start Page</p>
+          <p>Extra</p>
+        </div>
+        <div>
+          <h3>Resources</h3>
+          <p>Blog</p>
+          <p>Content Library</p>
+          <p>Browser Extension</p>
+          <p>Free Image Editor</p>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <p>Help Center</p>
+          <p>Status</p>
+          <p>Changelog</p>
+          <p>Product Roadmap</p>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <p>About</p>
+          <p>Transparency</p>
+          <p>Careers</p>
+          <p>Accessibility</p>
+          <p>Press</p>
+          <p>Sitemap</p>
         </div>
       </div>
-  
-      <div id="bottom">
-        <div>
-          <img src="https://i.ibb.co/rMB0YpJ/image.png" alt="" />
-        </div>
-        <div>
-          <div>
-            <h3>Tools</h3>
-            <p>Publishing</p>
-            <p>Analytics</p>
-            <p>Engagement</p>
-            <p>Start Page</p>
-            <p>Extra</p>
-          </div>
-          <div>
-            <h3>Resources</h3>
-            <p>Blog</p>
-            <p>Content Library</p>
-            <p>Browser Extension</p>
-            <p>Free Image Editor</p>
-          </div>
-          <div>
-            <h3>Support</h3>
-            <p>Help Center</p>
-            <p>Status</p>
-            <p>Changelog</p>
-            <p>Product Roadmap</p>
-          </div>
-          <div>
-            <h3>Company</h3>
-            <p>About</p>
-            <p>Transparency</p>
-            <p>Careers</p>
-            <p>Accessibility</p>
-            <p>Press</p>
-            <p>Sitemap</p>
-          </div>
-        </div>
-      </div>
+    </div>
   </body>
 </html>
+
 <script src="navbar.js"></script>

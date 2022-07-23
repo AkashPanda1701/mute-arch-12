@@ -12,245 +12,13 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,700&family=Roboto:ital,wght@0,100;0,400;0,700;1,700&display=swap"
       rel="stylesheet"
     />
-<link rel="stylesheet" href="navbar.css">
-    <style>
-
-      * {
-        margin: 0;
-        padding: 0;
-        font-family: Roboto, sans-serif;
-      }
-      body{
-        overflow-x: hidden;
-      }
-
-      h2 {
-        font-size: 35px;
-        line-height: 50px;
-        font-family: "Poppins", sans-serif;
-      }
-      p {
-        font-size: 22.5px;
-        font-family: Roboto, sans-serif;
-        line-height: 35px;
-      }
-      h3 {
-        line-height: 60px;
-        color: blue;
-      }
-
-    
-      
-      /* top section */
-
-      #top {
-        width: 85%;
-        margin: 60px auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 100px;
-      }
-
-      #top > div > img {
-        width: 100%;
-      }
-      #top h1 {
-        width: 91%;
-        line-height: 60px;
-        font-size: 46px;
-        font-family: "Poppins", sans-serif;
-        font-weight: 800;
-        margin: 100px 0 40px;
-      }
-
-      #top p {
-        width: 88%;
-        font-size: 22px;
-        line-height: 35px;
-        margin-bottom: 50px;
-      }
-      .signup + button {
-        border: 1px solid blue;
-        background-color: white;
-        color: blue;
-      }
-
-      button > img {
-        width: 15px;
-      }
-
-      #top + div {
-        width: 85%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-      }
-      #top + div > div > img {
-        width: 90%;
-      }
-
-      /* below top1 */
-
-      #belowTop1 {
-        width: 40%;
-        margin: 100px auto 40px;
-        text-align: center;
-      }
-
-      #belowTop1 > h2 {
-        margin: 40px auto;
-      }
-
-      /* belowTop2 */
-
-      .belowTop2 {
-        width: 65%;
-        margin: 140px auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 60px;
-      }
-      .belowTop2 img {
-        width: 100%;
-        height: 90%;
-      }
-      .belowTop2 p {
-        margin: 40px 0;
-      }
-
-      #aboveMiddle {
-        width: 45%;
-        margin: auto;
-        text-align: center;
-      }
-
-      /* Middle section */
-
-      @keyframes animate {
-        from {
-          -webkit-transform: translate3d(20%, 0, 0);
-          -ms-transform: translate3d(20%, 0, 0);
-          transform: translate3d(20%, 0, 0);
-        }
-        to {
-          -webkit-transform: translate3d(-20%, 0, 0);
-          -ms-transform: translate3d(-20%, 0, 0);
-          transform: translate3d(-20%, 0, 0);
-        }
-      }
-      #middle {
-        display: grid;
-        grid-template-columns: repeat(5, 25%);
-        grid-template-rows: 450px;
-        justify-content: center;
-        align-items: flex-end;
-        gap: 30px;
-        margin: 30px auto;
-        animation: 15s linear 0s infinite normal none running animate;
-        flex-wrap:nowrap;
-        box-sizing: border-box;
-        
-        
-      }
-      #middle > div {
-        text-align: center;
-        padding-bottom: 80px;
-        box-shadow: rgb(0 0 0 / 20%) 0px 0px 30px -1px;
-        border-radius: 10px;
-      }
-      #middle > div > img:first-child {
-        border-radius: 50%;
-        margin-top: -70px;
-      }
-      #middle > div > p {
-        width: 75%;
-        font-size: 16px;
-        margin: 25px auto 20px;
-        line-height: 20px;
-      }
-
-      #middle + div {
-        width: 85%;
-        margin: auto;
-        height: 150px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-      }
-      #middle + div > div {
-        display: grid;
-        align-items: center;
-        text-align: center;
-      }
-      #middle + div > div > h1 {
-        font-size: 45px;
-        font-family: "Poppins", sans-serif;
-        color: #2c4bff;
-        margin-bottom: -58px;
-      }
-
-      #belowMiddle {
-        width: 85%;
-      }
-      #belowMiddle button {
-        border: 1px solid blue;
-        background-color: white;
-        color: blue;
-      }
-
-      #aboveBottom1 {
-        text-align: center;
-        margin-bottom: 100px;
-      }
-      #aboveBottom1 > h4 {
-        font-size: 18px;
-      }
-      #aboveBottom1 > img {
-        width: 35%;
-      }
-     
-      @media all and (min-width: 360px) and (max-width: 980px) {
-        
-        #navbar > div:nth-child(2) {
-          position: absolute;
-          visibility: hidden;
-        }
-
-        #top {
-        grid-template-columns: repeat(1, 1fr);
-      }
-
-      #top + div {
-        grid-template-columns: repeat(1, 1fr);
-      }
-
-      .belowTop2 {
-        grid-template-columns: repeat(1, 1fr);
-      }
-      .belowTop2>div>button{
-        margin: 10px;
-      }
-     
-      #reverse>div:nth-child(1){
-        order: 1;
-      }
-      #reverse>div:nth-child(2){
-        
-        order: 0;
-      }
-
-      #middle + div {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      #middle + div > div > h1 {
-        margin-bottom: 0;
-      }
-    }
-    </style>
+    <link rel="stylesheet" href="navbar.css" />
   </head>
   <body>
     <div id="navbar">
       <div>
         <img
+          id="logo"
           src="https://static.buffer.com/login/public/img/buffer-logo.svg"
           alt=""
         />
@@ -264,13 +32,30 @@
         <p>Tools</p>
         <p>Pricing</p>
         <p>Blog</p>
-        <p>About</p>
+        <p class="aboutPage">About</p>
         <p>Customers</p>
       </div>
 
       <div>
-        <span id="login">LogIn</span>
+        <span class="login">LogIn</span>
         <button class="signup">Get Started Now</button>
+        <img id="myBtn" src="http://assets.stickpng.com/thumbs/588a6507d06f6719692a2d15.png" alt="" >
+      </div>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div>
+            <img src="https://i.ibb.co/S3NQXC6/image.png" alt="">
+            <h2>Tools</h2>
+            <h2>Pricing</h2>
+            <h2>Blog</h2>
+            <h2 class="aboutPage">About</h2>
+            <h2>Customers</h2>
+            <button class="signup">Get Started Now</button>
+            <h2 class="login">Log in</h2>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -334,7 +119,7 @@
       </div>
     </div>
 
-    <div class="belowTop2"  id="reverse">
+    <div class="belowTop2" id="reverse">
       <div>
         <img
           src="https://buffer.com/static/illustrations/collaborate-more-efficiently@2x.webp"
@@ -479,11 +264,10 @@
     <div id="aboveBottom2">
       <div>
         <h2>
-          140,000+ people like you use Buffer to build their brand on social media
-          every month
+          140,000+ people like you use Buffer to build their brand on social
+          media every month
         </h2>
         <button class="signup">Get Started Now</button>
-
       </div>
     </div>
 
@@ -527,6 +311,5 @@
     </div>
   </body>
 </html>
-
 
 <script src="navbar.js"></script>
